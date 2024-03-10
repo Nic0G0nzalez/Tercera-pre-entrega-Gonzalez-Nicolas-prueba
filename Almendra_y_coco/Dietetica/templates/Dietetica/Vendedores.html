@@ -1,0 +1,30 @@
+{% extends "Dietetica/index.html" %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Vendedores</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre del vendedor</th>
+            <th>Apellido</th>
+            <th>DNI</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for v in vendedores  %}
+        <tr>
+            <td>{{ v.nombre }}</td>
+            <td>{{ v.apellido }}</td>
+            <td>{{ v.DNI }}</td>
+            <td>{{ v.email }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock contenido %}
